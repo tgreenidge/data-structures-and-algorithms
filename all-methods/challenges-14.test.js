@@ -114,7 +114,7 @@ This data could be sorted by name or price.
 
 const sortBy = (property, arr) => {
   arr.sort((a, b) => {
-    return a.property - b.property;
+    return a[property] - b[property];
   });
 
   return arr;
