@@ -7,4 +7,5 @@ I approached it by copying the contents to a new (output) array one at a time un
 
 ## Solution
 [Code](../src/main/java/java401codechallenges/ArrayShift.java)
+
 ![White Board to Array Reverse problem](./assets/insert_shift_array.jpg)
