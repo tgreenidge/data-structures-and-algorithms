@@ -4,4 +4,5 @@ This repo shows the expected file structure for Code 401: Java data structures &
 This root README is where the links to daily work should live.
 
 Week 1 Challenges
-[Day 1: Reverse an Array]()
+
+[Day 1: Reverse an Array](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/ArrayShift.java)
