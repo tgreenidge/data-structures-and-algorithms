@@ -6,3 +6,5 @@ This root README is where the links to daily work should live.
 Week 1 Challenges
 
 [Day 1: Array Shift](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/)
+
+[Day 2: Binary Serach](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/)
