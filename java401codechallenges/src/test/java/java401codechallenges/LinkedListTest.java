@@ -1,10 +1,7 @@
 package java401codechallenges;
 
 import org.junit.Test;
-import sun.awt.image.ImageWatched;
-
 import java.util.ArrayList;
-
 import static org.junit.Assert.*;
 
 public class LinkedListTest {
@@ -41,15 +38,15 @@ public class LinkedListTest {
     @Test
     public void testHead() {
         Node expectedHead = new Node(2);
-        LinkedList testLinkedList = new LinkedList();
+        expectedHead.nextNode = new Node(4);
+        expectedHead.nextNode = new Node(3);
+
+        LinkedList testLinkedList  = new LinkedList();
         testLinkedList.insert(3);
         testLinkedList.insert(4);
         testLinkedList.insert(2);
         assertEquals("The head property will properly point to the first node in the linked list", expectedHead.value, testLinkedList.head.value);
     }
-
-
-
 
     @Test
     public void testValueFoundInLinkedList() {
