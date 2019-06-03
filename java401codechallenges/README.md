@@ -36,4 +36,4 @@ Create a LinkedList data structure that has a head property, and insert, include
 - includes method - the entire linked list was traversed to search for the value to be found. If the value of the current node is the same as the search value, true was return, If not the next node in the linked lst was then checked. False is return id the value if not found in any of the nodes
 - print method -  returns an array list of all the values in the linked list. The entire linked list was traversed, adding each current value to the arraylist.
 ### Solution
-[Code](../src/main/java/java401codechallenges/LinkedList.java)
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/ArrayShift.java)
