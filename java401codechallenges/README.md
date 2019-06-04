@@ -36,4 +36,22 @@ Create a LinkedList data structure that has a head property, and insert, include
 - includes method - the entire linked list was traversed to search for the value to be found. If the value of the current node is the same as the search value, true was return, If not the next node in the linked lst was then checked. False is return id the value if not found in any of the nodes
 - print method -  returns an array list of all the values in the linked list. The entire linked list was traversed, adding each current value to the arraylist.
 ### Solution
-[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/ArrayShift.java)
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/LinkedList.java)
+
+## Linked Lists insertion Challenge
+
+Create append, insertBefore and insertAfter methods for the linked list. 
+
+### Approach & Efficiency
+Efficiency -  for all 3 methods, the Big O is O(n)
+
+**Append** - traverse list to the second to last node, updating current node each time. Insert new node before the null node
+
+**Insert Before** - traverse list until the node before the node with the input before val (or to end of list if before val not in list), updating current node each time. Insert the new node before the node with the before val, if before val not in list, throw exception.
+
+**Insert After** - traverse list until the node with the input after val (or to end of list if after val not in list), updating current node each time. Insert the new node after the node with the after val, if after val not in list, throw exception.
+
+### Solution
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/LinkedList.java)
+
+![White Board to Array Shift problem](./assets/ll_insertions.JPG)

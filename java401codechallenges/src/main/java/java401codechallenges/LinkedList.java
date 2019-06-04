@@ -40,4 +40,57 @@ public class LinkedList {
 
         return nodeValues;
     }
+
+    public void append(int val) {
+        if (head == null) {
+            insert(val);
+        } else {
+            Node nodeToAppend = new Node(val);
+            nodeToAppend.nextNode = null;
+            Node next = head;
+
+            while (next.nextNode != null){
+                next = next.nextNode;
+            }
+
+            next.nextNode = nodeToAppend;
+        }
+    }
+
+    public void insertBefore(int beforeVal, int newVal) {
+        Node current = head;
+
+        if(head != null && head.value == beforeVal) {
+            insert(newVal);
+            return;
+        }
+
+        while(head != null && current.nextNode != null  && current.nextNode.value != beforeVal) {
+            current = current.nextNode;
+        }
+
+        if(current.nextNode == null) {
+            System.out.println("Value not found in list. Did not insert new val");
+        } else {
+            Node nodeToInsert = new Node (newVal);
+            nodeToInsert.nextNode = current.nextNode;
+            current.nextNode = nodeToInsert;
+        }
+    }
+
+    public void insertAfter(int afterVal, int newVal){
+        Node current = head;
+
+        while(current != null  && current.value != afterVal) {
+            current = current.nextNode;
+        }
+
+        if(current == null) {
+            System.out.println("Value not found in list. Did not insert new val");
+        } else {
+            Node nodeToInsert = new Node (newVal);
+            nodeToInsert.nextNode = current.nextNode;
+            current.nextNode = nodeToInsert;
+        }
+    }
 }
