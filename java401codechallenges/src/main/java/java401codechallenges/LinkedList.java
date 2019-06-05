@@ -70,7 +70,7 @@ public class LinkedList {
         }
 
         if(current.nextNode == null) {
-            System.out.println("Value not found in list. Did not insert new val");
+            throw new IllegalArgumentException("Value not found in list. Did not insert new val");
         } else {
             Node nodeToInsert = new Node (newVal);
             nodeToInsert.nextNode = current.nextNode;
@@ -86,11 +86,52 @@ public class LinkedList {
         }
 
         if(current == null) {
-            System.out.println("Value not found in list. Did not insert new val");
+            throw new IllegalArgumentException("Value not found in list. Did not insert new val");
         } else {
             Node nodeToInsert = new Node (newVal);
             nodeToInsert.nextNode = current.nextNode;
             current.nextNode = nodeToInsert;
         }
+    }
+
+    public int kthValueFromEnd(int k) {
+        if(k < 0) {
+            throw new IllegalArgumentException("k is negative - should be positive");
+        }
+
+        if(head == null)
+            throw new IndexOutOfBoundsException("List is empty");
+
+        // tracks the length of the list
+        int length = 0;
+
+        LinkedList newList = new LinkedList();
+
+        Node current = head;
+
+        while(current != null) {
+            newList.insert(current.value);
+            current = current.nextNode;
+            length++;
+        }
+
+        // k cannot be more than the length
+        if(k > length)
+            throw new IndexOutOfBoundsException("List is not long enough to get kth value from the end");
+
+        current = newList.head;
+
+        //tracks up to K
+        int i = 0;
+        while(i < length) {
+            if(i == k) {
+                break;
+            } else {
+                i++;
+                current = current.nextNode;
+            }
+        }
+
+        return current.value;
     }
 }

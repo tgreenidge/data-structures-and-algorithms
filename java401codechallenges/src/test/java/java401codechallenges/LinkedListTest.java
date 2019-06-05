@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class LinkedListTest {
+
     @Test
     public void testEmptyLinkedList() {
         LinkedList newLinkedList = new LinkedList();
         assertNull("Can successfully instantiate an empty linked list", newLinkedList.head);
     }
-
 
     @Test
     public void testProperlyInsertIntoLinkedListOneNode() {
@@ -174,6 +174,58 @@ public class LinkedListTest {
         expectedOutput.add(5);
         expectedOutput.add(7);
         assertEquals( "Can successfully insert a node after the last node of the linked list", expectedOutput, testLinkedList.print());
+    }
+
+    @Test (expected = IndexOutOfBoundsException.class)
+    public void testKthNodeFromEndShortList() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.append(3);
+        testLinkedList.append(4);
+        testLinkedList.append(5);
+        testLinkedList.kthValueFromEnd(7);
+    }
+
+    @Test (expected = IndexOutOfBoundsException.class)
+    public void testKthNodeFromEndKSameAsLength() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.append(3);
+        testLinkedList.append(4);
+        testLinkedList.append(5);
+        testLinkedList.kthValueFromEnd(3);
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void testKthNodeFromEndKIsNotPositive() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.append(3);
+        testLinkedList.append(4);
+        testLinkedList.append(5);
+        testLinkedList.kthValueFromEnd(-1);
+    }
+
+    @Test
+    public void testKthNodeFromEndLinkedListSize1() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.append(3);
+        assertEquals("Where the linked list is of a size 1, k is 0", 3, testLinkedList.kthValueFromEnd(0));
+    }
+
+    @Test (expected = IndexOutOfBoundsException.class)
+    public void testKthNodeFromEndLinkedListSize1KNot0() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.append(3);
+        testLinkedList.kthValueFromEnd(1);
+    }
+
+    @Test
+    public void testKthNodeFromEndKInMiddleOfList() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.append(3);
+        testLinkedList.append(4);
+        testLinkedList.append(5);
+        assertEquals("“Happy Path” where k is not at the end, but somewhere in the middle of the linked list", 3, testLinkedList.kthValueFromEnd(2));
+        assertEquals("“Happy Path” where k is not at the end, but somewhere in the middle of the linked list", 4, testLinkedList.kthValueFromEnd(1));
+
     }
 
 }

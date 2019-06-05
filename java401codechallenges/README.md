@@ -55,3 +55,19 @@ Efficiency -  for all 3 methods, the Big O is O(n)
 [Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/LinkedList.java)
 
 ![White Board to Array Shift problem](./assets/ll_insertions.JPG)
+
+## Linked Lists Kth value from the end Challenge
+
+Create KthValueFrom end method that outputs the kth value from the end of the list
+
+### Approach & Efficiency
+Approach - Traversed linked list to create new linked list that is the reverse of the linked list. Created a new list so that the list itself is not modified. Once the reversed list is created, traverse the reverse list from 0 to kth value. 
+
+Efficiency -  For both time and space, the complextiy Big O is O(n)
+
+
+### Solution
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/LinkedList.java)
+
+![White Board to Array Shift problem](./assets/ll_kth_from_end.JPG)
+
