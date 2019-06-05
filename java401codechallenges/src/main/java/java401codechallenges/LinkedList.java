@@ -115,6 +115,7 @@ public class LinkedList {
             length++;
         }
 
+        // k cannot be more than the length
         if(k > length)
             throw new IndexOutOfBoundsException("List is not long enough to get kth value from the end");
 
@@ -123,7 +124,6 @@ public class LinkedList {
         //tracks up to K
         int i = 0;
         while(i < length) {
-
             if(i == k) {
                 break;
             } else {
