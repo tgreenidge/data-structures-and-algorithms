@@ -134,4 +134,32 @@ public class LinkedList {
 
         return current.value;
     }
+
+    public static LinkedList merge(LinkedList list1, LinkedList list2) {
+        if(list1.head == null)
+            return list2;
+        else if(list2.head == null)
+            return list1;
+
+        Node temp;
+        Node next1 = list1.head;
+        Node next2 = list2.head;
+
+        while(next1.nextNode != null  && next2.nextNode != null) {
+            temp = next1.nextNode;
+            next1.nextNode = next2;
+            next1 = temp;
+            next2 = next2.nextNode;
+        }
+
+        if(next1.nextNode == null) {
+            temp = next2.nextNode;
+            next1.nextNode = temp;
+        } else {
+            temp = next1.nextNode;
+            next1.nextNode = next2;
+            next1.nextNode.nextNode = temp;
+        }
+        return list1;
+    }
 }

@@ -176,7 +176,7 @@ const lowestWeeklyAverage = (weather) => {
     let weeklyAverage = weekly.reduce((total, day) => {
       return total + day;
     }, 0) / weekly.length;
-    lowestWeeklyAverage = lowestWeeklyAverage ?  Math.min(weeklyAverage, lowestWeeklyAverage) : weeklyAverage;
+    lowestWeeklyAverage = lowestWeeklyAverage ? Math.min(weeklyAverage, lowestWeeklyAverage) : weeklyAverage;
   });
 
   return lowestWeeklyAverage;
