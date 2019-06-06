@@ -69,5 +69,20 @@ Efficiency -  For both time and space, the complextiy Big O is O(n)
 ### Solution
 [Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/LinkedList.java)
 
-![White Board to Array Shift problem](./assets/ll_kth_from_end.JPG)
+![White Board to Kth from end problem](./assets/ll_kth_from_end.JPG)
+
+## Linked Lists merge 2 linked lists Challenge
+
+Create merge method takes in 2 linked lists and returns the 2 list merged (zipped into one list)
+
+### Approach & Efficiency
+Approach - traverse each linked list. Point the next node of current node in list1 to next node in list2, and vici versa
+
+Efficiency -  Time -  Big O(n + m), where n = length of 1st LL, and m is length of 2nd LL
+              Space - Big (1);
+
+### Solution
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/LinkedList.java)
+
+![White Board to merge linked lists problem](./assets/ll_merge.jpg)
 

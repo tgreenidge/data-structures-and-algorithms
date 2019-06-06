@@ -228,4 +228,72 @@ public class LinkedListTest {
 
     }
 
+    @Test
+    public void testMerge2EmptyLists() {
+        LinkedList list1 = new LinkedList();
+        LinkedList list2 = new LinkedList();
+        assertNull("Should return empty list", LinkedList.merge(list1, list2).head);
+    }
+
+    @Test
+    public void testMergeList1Empty() {
+        LinkedList list1 = new LinkedList();
+        LinkedList list2 = new LinkedList();
+        list2.head = new Node(2);
+        assertEquals("Should return list2", list2, LinkedList.merge(list1, list2));
+    }
+
+    @Test
+    public void testMergeList2Empty() {
+        LinkedList list1 = new LinkedList();
+        LinkedList list2 = new LinkedList();
+        list1.head = new Node(2);
+        assertEquals("Should return list1", list1, LinkedList.merge(list1, list2));
+    }
+
+    @Test
+    public void testMerge2SingleNodeLists() {
+        LinkedList list1 = new LinkedList();
+        LinkedList list2 = new LinkedList();
+        list1.head = new Node(2);
+        list2.head = new Node(3);
+        LinkedList expectedList = new LinkedList();
+        expectedList.head = new Node(2);
+        expectedList.head.nextNode = new Node(3);
+        assertEquals("Should return list1", expectedList.print(), LinkedList.merge(list1, list2).print());
+    }
+
+    @Test
+    public void testMerge2NodeListsUnequalLength1() {
+        LinkedList list1 = new LinkedList();
+        LinkedList list2 = new LinkedList();
+        list1.head = new Node(2);
+        list1.head.nextNode = new Node(4);
+        list2.head = new Node(3);
+        LinkedList expectedList = new LinkedList();
+        expectedList.head = new Node(2);
+        expectedList.head.nextNode = new Node(3);
+        expectedList.head.nextNode.nextNode = new Node(4);
+        assertEquals("Should return list1", expectedList.print(), LinkedList.merge(list1, list2).print());
+    }
+
+    @Test
+    public void testMerge2NodeListsUnequalLength2() {
+        LinkedList list1 = new LinkedList();
+        LinkedList list2 = new LinkedList();
+        list1.head = new Node(2);
+        list1.head.nextNode = new Node(4);
+
+        list2.head = new Node(3);
+        list2.head.nextNode = new Node(5);
+        list2.head.nextNode.nextNode = new Node(6);
+        LinkedList expectedList = new LinkedList();
+        expectedList.head = new Node(2);
+        expectedList.head.nextNode = new Node(3);
+        expectedList.head.nextNode.nextNode = new Node(4);
+        expectedList.head.nextNode.nextNode.nextNode = new Node(5);
+        expectedList.head.nextNode.nextNode.nextNode.nextNode = new Node(6);
+        assertEquals("Should return ExpectedList", expectedList.print(), LinkedList.merge(list1, list2).print());
+    }
+
 }
