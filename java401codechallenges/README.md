@@ -86,3 +86,31 @@ Efficiency -  Time -  Big O(n + m), where n = length of 1st LL, and m is length 
 
 ![White Board to merge linked lists problem](./assets/ll_merge.jpg)
 
+## Stacks
+Create a Stack data structure that has a top property, and pop, push and peek methods
+
+## Approach & Efficiency
+- All methods have O(1) time and space complexity
+
+
+## API
+- push method - A new node with the input value was created, I then removed the top reference to the original top in the stack, and made the next node of the new node the original top. Then the new node was made the yop
+- pop method - If top is null, null pointer exception thrown, otherwise, top is removed, and it's next node is now the top
+- peek method -  returns the top value fo the stack
+### Solution
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/Stack.java)
+
+## Queues
+Create a Queue data structure that has a front and back properties, and enqueue, dequeue and peek methods
+
+## Approach & Efficiency
+- All methods have O(1) time and space complexity
+
+
+
+## API
+- enqueue method - if front is null, front and back points to new node created with value input. Otherwise, the next node of the back pointer is set to the new node that is created with the input va;ue
+- dequeue method - The front is set to the original front's next node. The original front's value is returned
+- peek method -  returns the front value fo the queue
+### Solution
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/Queue.java)
