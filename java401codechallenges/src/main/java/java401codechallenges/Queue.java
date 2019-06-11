@@ -41,6 +41,7 @@ public class Queue {
 
     public Integer peek() {
         if(front == null) {
+            //throw exception instead
             return null;
         } else {
             return front.value;
