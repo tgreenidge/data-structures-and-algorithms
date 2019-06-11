@@ -114,3 +114,19 @@ Create a Queue data structure that has a front and back properties, and enqueue,
 - peek method -  returns the front value fo the queue
 ### Solution
 [Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/Queue.java)
+
+## PseudoQueues
+Create a Queue data structure that has a front and back properties, and enqueue, dequeue and peek methods
+
+## Approach & Efficiency
+- Enqueue has O(n) time and space complexity
+- Dequeue has O(1) time and space complexity
+
+
+
+
+## API
+- enqueue method - 2 stacks are used. For enqueue, empty stack1 into stack2, then push input value into stack1. Push all of stack2 onto stack1;
+- dequeue method - The original top value  of stack1 is returned
+### Solution
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/PseudoQueue.java)
