@@ -130,3 +130,4 @@ Create a Queue data structure that has a front and back properties, and enqueue,
 - dequeue method - The original top value  of stack1 is returned
 ### Solution
 [Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/PseudoQueue.java)
+![White Board to merge linked lists problem](./assets/queue_with_stacks.jpg)
