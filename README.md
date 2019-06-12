@@ -12,3 +12,5 @@ Week 1 Challenges
 [Day 6, 7, 8, 9: LinkedList Implementations](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/)
 
 [Day 11, 12: Stacks and Queue Implementations](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/)
+
+[Day 13: Animal Shelter Implementation](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/)
