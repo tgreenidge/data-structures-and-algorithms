@@ -1,14 +1,14 @@
 package java401codechallenges;
 
-public class Stack {
-    Node top;
+public class Stack<T> {
+    Node<T> top;
 
     public Stack() {
         top = null;
     }
 
-    public void push(int val) {
-        Node newNode = new Node(val);
+    public void push(T val) {
+        Node<T> newNode = new Node(val);
         if(top == null)
             top = newNode;
         else {
@@ -17,16 +17,16 @@ public class Stack {
         }
     }
 
-    public int pop() {
+    public T pop() {
         if(top == null) {
             throw new NullPointerException("Empty List");
         }
-        Node temp = top;
+        Node<T> temp = top;
         top = top.nextNode;
         return temp.value;
     }
 
-    public Integer peek() {
+    public T peek() {
         if(top == null)
             return null;
         else

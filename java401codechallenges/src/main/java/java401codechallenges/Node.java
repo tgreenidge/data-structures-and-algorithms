@@ -1,10 +1,10 @@
 package java401codechallenges;
 
-public class Node {
-    int value;
-    Node nextNode;
+public class Node<T> {
+    T value;
+    Node<T> nextNode;
 
-    public Node(int value) {
+    public Node(T value) {
         this.value = value;
         this.nextNode = null;
     }

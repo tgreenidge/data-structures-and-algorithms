@@ -64,14 +64,14 @@ public class StackTest {
 
     @Test
     public void testPeekOnceSingleNode() {
-        Stack testStack = new Stack();
+        Stack<Integer> testStack = new Stack();
         testStack.push(5);
         assertTrue("Should return 5", testStack.peek() == 5);
     }
 
     @Test
     public void testPeekPushMultipleTimes() {
-        Stack testStack = new Stack();
+        Stack<Integer> testStack = new Stack();
         testStack.push(5);
         testStack.push(6);
         testStack.push(7);
