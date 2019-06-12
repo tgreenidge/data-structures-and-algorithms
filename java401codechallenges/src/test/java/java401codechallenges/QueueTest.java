@@ -67,14 +67,14 @@ public class QueueTest {
 
     @Test
     public void testPeekOnceSingleNode() {
-        Queue testQueue = new Queue();
+        Queue<Integer> testQueue = new Queue();
         testQueue.enqueue(5);
         assertTrue("Front should be 5", testQueue.peek() == 5);
     }
 
     @Test
     public void testPeekMultipleNodes() {
-        Queue testQueue = new Queue();
+        Queue<Integer> testQueue = new Queue();
         testQueue.enqueue(5);
         testQueue.enqueue(6);
         testQueue.enqueue(7);

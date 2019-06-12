@@ -1,8 +1,8 @@
 package java401codechallenges;
 
-public class PseudoQueue {
-    Stack stack1;
-    Stack stack2;
+public class PseudoQueue<T> {
+    Stack<T> stack1;
+    Stack<T> stack2;
 
     public PseudoQueue(){
         this.stack1 = new Stack();
@@ -10,7 +10,7 @@ public class PseudoQueue {
     }
 
 
-    public void enqueue(int value) {
+    public void enqueue(T value) {
         while(stack1.top != null){
             stack2.push(stack1.pop());
         }
@@ -22,7 +22,7 @@ public class PseudoQueue {
         }
     }
 
-    public int dequeue() {
+    public T dequeue() {
         return stack1.pop();
     }
 }

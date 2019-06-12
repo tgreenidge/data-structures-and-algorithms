@@ -2,21 +2,21 @@ package java401codechallenges;
 
 import java.util.ArrayList;
 
-public class LinkedList {
-    Node head;
+public class LinkedList<T> {
+    Node<T> head;
 
     public LinkedList(){
         this.head = null;
     }
 
-    public void insert(int val) {
-        Node newNode = new Node(val);
+    public void insert(T val) {
+        Node<T> newNode = new Node(val);
         newNode.nextNode = head;
         head = newNode;
     }
 
-    public boolean includes(int target) {
-        Node nextNode = head;
+    public boolean includes(T target) {
+        Node<T> nextNode = head;
 
         while(nextNode != null) {
             if(nextNode.value == target)
@@ -28,10 +28,10 @@ public class LinkedList {
         return false;
     }
 
-    public ArrayList<Integer> print() {
-        ArrayList<Integer> nodeValues = new ArrayList<>();
+    public ArrayList<T> print() {
+        ArrayList<T> nodeValues = new ArrayList<T>();
 
-        Node nextNode = head;
+        Node<T> nextNode = head;
 
         while(nextNode != null){
             nodeValues.add(nextNode.value);
@@ -41,7 +41,7 @@ public class LinkedList {
         return nodeValues;
     }
 
-    public void append(int val) {
+    public void append(T val) {
         if (head == null) {
             insert(val);
         } else {
@@ -57,8 +57,8 @@ public class LinkedList {
         }
     }
 
-    public void insertBefore(int beforeVal, int newVal) {
-        Node current = head;
+    public void insertBefore(T beforeVal, T newVal) {
+        Node<T> current = head;
 
         if(head != null && head.value == beforeVal) {
             insert(newVal);
@@ -78,8 +78,8 @@ public class LinkedList {
         }
     }
 
-    public void insertAfter(int afterVal, int newVal){
-        Node current = head;
+    public void insertAfter(T afterVal, T newVal){
+        Node<T> current = head;
 
         while(current != null  && current.value != afterVal) {
             current = current.nextNode;
@@ -94,20 +94,20 @@ public class LinkedList {
         }
     }
 
-    public int kthValueFromEnd(int k) {
+    public T kthValueFromEnd(int k) {
         if(k < 0) {
             throw new IllegalArgumentException("k is negative - should be positive");
         }
 
         if(head == null)
-            throw new IndexOutOfBoundsException("List is empty");
+            throw new NullPointerException("List is empty");
 
         // tracks the length of the list
         int length = 0;
 
         LinkedList newList = new LinkedList();
 
-        Node current = head;
+        Node<T> current = head;
 
         while(current != null) {
             newList.insert(current.value);
@@ -117,7 +117,7 @@ public class LinkedList {
 
         // k cannot be more than the length
         if(k > length)
-            throw new IndexOutOfBoundsException("List is not long enough to get kth value from the end");
+            throw new NullPointerException("List is not long enough to get kth value from the end");
 
         current = newList.head;
 
@@ -141,25 +141,33 @@ public class LinkedList {
         else if(list2.head == null)
             return list1;
 
-        Node temp;
+
         Node next1 = list1.head;
         Node next2 = list2.head;
+        Node temp = next1.nextNode;
 
-        while(next1.nextNode != null  && next2.nextNode != null) {
+        while(next1 != null  && next2 != null) {
             temp = next1.nextNode;
             next1.nextNode = next2;
             next1 = temp;
             next2 = next2.nextNode;
         }
 
-        if(next1.nextNode == null) {
-            temp = next2.nextNode;
-            next1.nextNode = temp;
-        } else {
-            temp = next1.nextNode;
-            next1.nextNode = next2;
-            next1.nextNode.nextNode = temp;
-        }
+        System.out.println(next1.value);
+        System.out.println(next1.value);
+//        temp = next2.nextNode;
+//        next1.nextNode = temp;
+//        if(next1.nextNode == null) {
+//            temp = next2.nextNode;
+//            next1.nextNode = temp;
+//        } else {
+//
+//            next2.nextNode = next1;
+////            next1.nextNode.nextNode = temp;
+//
+////            next2.nextNode = next1.nextNode;
+////            next1.nextNode = next2;
+//        }
         return list1;
     }
 }

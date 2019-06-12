@@ -1,16 +1,16 @@
 package java401codechallenges;
 
-public class Queue {
-    Node front;
-    Node back;
+public class Queue<T> {
+    Node<T> front;
+    Node<T> back;
 
     public Queue() {
         this.front = null;
         this.back = null;
     }
 
-    public void enqueue(int val) {
-        Node newNode = new Node(val);
+    public void enqueue(T val) {
+        Node<T> newNode = new Node(val);
         if(front == null) {
             front = newNode;
             back = newNode;
@@ -21,12 +21,12 @@ public class Queue {
 
     }
 
-    public Integer dequeue() {
+    public T dequeue() {
         if(front == null) {
             throw new NullPointerException("empty list");
         }
 
-        int result = front.value;
+        T result = front.value;
 
 
         if(front == back) {
@@ -39,7 +39,7 @@ public class Queue {
         return result;
     }
 
-    public Integer peek() {
+    public T peek() {
         if(front == null) {
             //throw exception instead
             return null;
