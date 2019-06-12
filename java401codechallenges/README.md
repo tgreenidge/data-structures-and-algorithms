@@ -131,3 +131,21 @@ Create a Queue data structure that has a front and back properties, and enqueue,
 ### Solution
 [Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/PseudoQueue.java)
 ![White Board to merge linked lists problem](./assets/queue_with_stacks.jpg)
+
+## AnimalShelter
+Create a Queue data structure that has a front and back properties, and enqueue, dequeue and peek methods
+
+## Approach & Efficiency
+- Enqueue has O(1) time and space complexity
+- Dequeue has O(1) time and space complexity
+
+- Created an animal class, an a dog class and cat class that both inherits from Animal.
+- Created a Animal Shelter class that has 2 queues - a dog queue and a cat queue
+
+
+## API
+- enqueue method - if animal is a cat, cat is enqueued into the shelter's cat queue, if if animal is a dog, dog is enqueued into the shelter's dog queue
+- dequeue method - If preference is cat, dequeue from cat queue, if preference is dog, dequeue from dog queue, if neither, return null
+### Solution
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/AnimalShelter.java)
+![White Board to merge linked lists problem](./assets/animal_shelter.jpg)
