@@ -151,13 +151,21 @@ Create a Queue data structure that has a front and back properties, and enqueue,
 ![White Board to merge linked lists problem](./assets/animal_shelter.jpg)
 
 ## MultibracketValidation
-Create a
+Create a function that takes in a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets:
+
+         - Round Brackets : ()
+
+         - Square Brackets : []
+
+         - Curly Brackets : {}
+
 
 ## Approach & Efficiency
 Time O(n);
 Space O(n);
 
-
+Traverse string and Push opening brackets onto a stack, when a closing bracket is encountered in string, and the closing bracket pairs up with the opening bracket, pop the opening bracket off the stack.
+Once a closing bracket does not pair with an opening bracket, return false. Ignore all other characters found in string.
 
 [Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/MultibracketValidation.java)
 ![White Board to merge linked lists problem](./assets/bracket_validator.jpg)
