@@ -149,3 +149,15 @@ Create a Queue data structure that has a front and back properties, and enqueue,
 ### Solution
 [Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/AnimalShelter.java)
 ![White Board to merge linked lists problem](./assets/animal_shelter.jpg)
+
+## MultibracketValidation
+Create a
+
+## Approach & Efficiency
+Time O(n);
+Space O(n);
+
+
+
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/MultibracketValidation.java)
+![White Board to merge linked lists problem](./assets/bracket_validator.jpg)
