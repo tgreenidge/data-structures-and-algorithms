@@ -169,3 +169,35 @@ Once a closing bracket does not pair with an opening bracket, return false. Igno
 
 [Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/MultibracketValidation.java)
 ![White Board to merge linked lists problem](./assets/bracket_validator.jpg)
+
+## TreeNode
+create a class that contains a root property, a left treenode property, and a right tree node property
+
+
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/TreeNode.java)
+
+## BinaryTree
+Create a class with 3 traversals - preorder, inorder and postorder, and return arrays with values for each function
+
+## Approach & Efficiency
+Time O(n) for all 3
+Space O(1) for all 3;
+
+- preOrder - process the root value first (add it's value to the array list), then process the left node, then process the right node
+- inOrder - process the left node value first (add it's value to the array list), then process the root node, then process the right node
+- postOrder - process the left value first (add it's value to the array list), then process the right node, then process the root node
+
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/BinaryTree.java)
+
+## BinarySearchTree
+Create a Binary Search tree class with 2 methods - contains and add
+
+## Approach & Efficiency
+Time O(n); for both methods
+Space O(1); for both methods
+
+- add - checks the root to see if the value is less than or more than the target. If less than, add to left tree, else add to right of the tree
+- contains - uses recursion to search for value in the tree. On each iteration of recursion, checks the root to see if the value is less than or more than the target. If less than, search right of tree, else search right of the tree
+
+
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/BinarySearchTree.java)
