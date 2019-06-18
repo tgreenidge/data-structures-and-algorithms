@@ -17,8 +17,8 @@ public class BinaryTree<T extends Comparable<T>> {
         this.root = root;
     }
 
-    public void setRoot(T value) {
-        this.root.value = value;
+    protected void setRoot(T value) {
+        this.root = new TreeNode<T>(value);
     }
 
     public ArrayList<T> preOrder(){
