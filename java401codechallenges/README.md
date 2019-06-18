@@ -213,10 +213,10 @@ Space O(1);
 fizzbuzz - calls fizzBuzzHelperMethod to process the nodes, by first passing in the root node of the tree. After the nodes are process, the original tree that was passed in is returned
 
 fizzBuzzHelper - traverse the tree recursively using preorder traversal (using the fizzBuzzHelper method)
-    - if node's integer value is divisible by 15, replace the node value with "FizzBuzz"
-    - if node's integer value is divisible by 3, replace the node value with "Fizz"
-    - if node's integer value is divisible by 5, replace the node value with "Buzz"
-    -
+- if node's integer value is divisible by 15, replace the node value with "FizzBuzz"
+- if node's integer value is divisible by 3, replace the node value with "Fizz"
+- if node's integer value is divisible by 5, replace the node value with "Buzz"
+
 
 
 [Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/FizzBuzzTree.java)
