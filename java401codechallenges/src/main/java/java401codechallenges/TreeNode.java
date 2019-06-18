@@ -1,6 +1,6 @@
 package java401codechallenges;
 
-public class TreeNode<T> {
+public class TreeNode<T extends Comparable<T>> {
     T value;
     TreeNode<T> left;
     TreeNode<T> right;
@@ -29,5 +29,9 @@ public class TreeNode<T> {
 
     public T getValue() {
         return value;
+    }
+
+    public void setValue( T value) {
+        value = value;
     }
 }

@@ -10,47 +10,54 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T>{
         this.root = new TreeNode<T>(value);
     }
 
+    public void setRoot(T value) {
+        this.root = new TreeNode<T>(value);
+    }
+
     public void add(T value) {
-        if(root == null){
-            super.setRoot(value);
-        } else if ( root.value.compareTo(value) < 0 || root.value.equals(value)){
-            TreeNode current = root.getLeft();
-            while(current.left != null) {
-                current = current.left;
-                if(current.left == null) {
-                    current.setLeft(new TreeNode(value));
-                    current = current.left;
-                }
-            }
+        if(root == null) {
+            setRoot(value);
         } else {
-            TreeNode current = root.getRight();
-            while(current.right != null) {
-                current = current.right;
-                if(current.right == null) {
-                    current.setRight(new TreeNode(value));
-                    current = current.right;
-                }
+            addHelper(value, root);
+        }
+    }
+
+    public void addHelper(T value, TreeNode current) {
+        if(current == null){
+            return ;
+        } else if ( current.value.compareTo(value) > 0 || current.value.equals(value)){
+            if(current.left == null) {
+                current.setLeft(new TreeNode(value));
+                current = current.left;
             }
+            addHelper(value, current.left);
+
+        } else {
+            if(current.right == null) {
+                current.setRight(new TreeNode(value));
+                current = current.right;
+            }
+            addHelper(value, current.right);
         }
     }
 
     public Boolean contains(T value) {
-        if(this.root.value == null){
+        if(this.root == null){
             return false;
         }
 
-        return containsHelper(value,root);
+        return containsHelper(value, root);
     }
 
     public Boolean containsHelper(T value, TreeNode<T> current) {
         if(current == null){
-            return null;
+            return false;
         } else if(current.value.equals(value)) {
             return true;
         } else if (current.value.compareTo(value) < 0) {
-            return containsHelper(value, current.left);
-        } else {
             return containsHelper(value, current.right);
+        } else {
+            return containsHelper(value, current.left);
         }
     }
 }
