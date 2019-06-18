@@ -32,6 +32,6 @@ public class TreeNode<T extends Comparable<T>> {
     }
 
     public void setValue( T value) {
-        value = value;
+        this.value = value;
     }
 }

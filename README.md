@@ -17,4 +17,6 @@ Week 1 Challenges
 
 [Day 14: Matching Brackets Validator](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/)
 
-[Day 14: Tree implementations](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/)
+[Day 15: BinaryTree and BinarySearchTree implementations](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/)
+
+[Day 15: FizzBuzzTree implementations](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/)
