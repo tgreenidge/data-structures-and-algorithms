@@ -221,3 +221,18 @@ fizzBuzzHelper - traverse the tree recursively using preorder traversal (using t
 
 [Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/FizzBuzzTree.java)
 ![White Board to Kth from end problem](./assets/fizz_buzz_tree.jpg)
+
+
+## Breadth first traversal binary tree
+Create a breadth first traversal method that which takes a Binary Tree as its unique input and prints the nodes visited
+
+## Approach & Efficiency
+Time O(n);
+Space O(n);
+Use a helper function that takes in the tree's root value and does all the heavy lifting.
+- create a queue for visited nodes
+- Continuously add nodes to the queue until no further nodes are left to be added. When the node is about to be dequeued, add the children to the queue. Add the value to a string that will be returned after all the nodes in the tree are visited.
+
+
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/BinaryTree.java)
+![White Board to Kth from end problem](./assets/breadth_first.jpg)
