@@ -20,3 +20,5 @@ Week 1 Challenges
 [Day 15: BinaryTree and BinarySearchTree implementations](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/)
 
 [Day 15: FizzBuzzTree implementations](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/)
+
+[Day 16: BinaryTree breadthFirst implementation](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/)
