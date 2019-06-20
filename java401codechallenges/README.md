@@ -236,3 +236,18 @@ Use a helper function that takes in the tree's root value and does all the heavy
 
 [Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/BinaryTree.java)
 ![White Board to Kth from end problem](./assets/breadth_first.jpg)
+
+## Find maximum binary tree
+Create a findMaximum method that which takes a Binary Tree as its unique input and returns the maximum value stored in the tree.
+
+## Approach & Efficiency
+Time O(n);
+Space O(n);
+Use a helper function that takes in the tree's root value and does all the heavy lifting.
+- create a variable that stores the maximum
+- using inOrder traversal, check each node to see if it is bigger than the maximum. If so, replace the maximum value with that node's value
+- return the maximum value
+
+
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/BinaryTree.java)
+![White Board to Kth from end problem](./assets/find_maximum.png)
