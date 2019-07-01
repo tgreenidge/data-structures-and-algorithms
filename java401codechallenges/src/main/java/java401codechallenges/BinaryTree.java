@@ -73,4 +73,27 @@ public class BinaryTree<T extends Comparable<T>> {
         return postOrderedList;
 
     }
+
+    public static int findMaximumValue(BinaryTree<Integer> tree) {
+        if(tree.root == null)
+            throw new NullPointerException("Tree is empty");
+
+        int maxVal = Integer.MIN_VALUE;
+        Queue<TreeNode<Integer>> queue = new Queue<>();
+
+        TreeNode<Integer> current = tree.root;
+        queue.enqueue(current);
+
+        while (queue.front != null) {
+            current = queue.dequeue();
+            maxVal = Math.max(current.value, maxVal);
+
+            if(current.left != null)
+                queue.enqueue(current.left);
+
+            if(current.right != null)
+                queue.enqueue(current.right);
+        }
+        return maxVal;
+    }
 }
