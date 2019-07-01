@@ -1,6 +1,7 @@
 package java401codechallenges;
 
 import java.util.ArrayList;
+import java.util.StringJoiner;
 
 public class BinaryTree<T extends Comparable<T>> {
     TreeNode<T> root;
@@ -95,5 +96,28 @@ public class BinaryTree<T extends Comparable<T>> {
                 queue.enqueue(current.right);
         }
         return maxVal;
+    }
+
+    public static String breadthFirst(BinaryTree<Integer> tree) {
+        if(tree.root == null)
+            throw new NullPointerException("Tree is empty");
+
+        StringJoiner valuesInTree = new StringJoiner(", ");
+        Queue<TreeNode<Integer>> queue = new Queue<>();
+
+        TreeNode<Integer> current = tree.root;
+        queue.enqueue(current);
+
+        while (queue.front != null) {
+            current = queue.dequeue();
+            valuesInTree.add(current.value.toString());
+
+            if(current.left != null)
+                queue.enqueue(current.left);
+
+            if(current.right != null)
+                queue.enqueue(current.right);
+        }
+        return valuesInTree.toString();
     }
 }
