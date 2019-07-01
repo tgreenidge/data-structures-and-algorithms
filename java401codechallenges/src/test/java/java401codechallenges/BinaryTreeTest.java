@@ -234,4 +234,27 @@ public class BinaryTreeTest {
         tree.root.getRight().setRight(new TreeNode<>(17));
         assertEquals("Should be 18", 18, (int) BinaryTree.findMaximumValue(tree));
     }
+
+    @Test(expected = NullPointerException.class)
+    public void testBreadthFirstWithEmptyTree() {
+        BinaryTree<Integer> tree = new BinaryTree();
+        BinaryTree.findMaximumValue(tree);
+    }
+
+    @Test
+    public void testBreadthFirstWithOneNode() {
+        BinaryTree<Integer> tree = new BinaryTree<>(12);
+        assertEquals("Should equal 12", "12", BinaryTree.breadthFirst(tree));
+    }
+
+    @Test
+    public void testBreadthFirstMultipleLeftAndRightNodes() {
+        BinaryTree<Integer> tree = new BinaryTree<>(12);
+        tree.root.setLeft(new TreeNode<>(13));
+        tree.root.getLeft().setLeft(new TreeNode<>(18));
+        tree.root.setRight(new TreeNode<>(14));
+        tree.root.getRight().setLeft(new TreeNode<>(16));
+        tree.root.getRight().setRight(new TreeNode<>(17));
+        assertEquals("Should be 18", "12, 13, 14, 18, 16, 17", BinaryTree.breadthFirst(tree));
+    }
 }
