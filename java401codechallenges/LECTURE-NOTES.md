@@ -46,6 +46,8 @@ InsertionSort(int[] arr)
     - Website
         - [Geek for Geeks explanation](https://www.geeksforgeeks.org/insertion-sort/)
 
+[Code](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/src/main/java/java401codechallenges/Sorts.java)
+
 ***
 
 # Lecture Notes: Merge Sort
@@ -118,3 +120,4 @@ Describe in detail how the algorithm works. Include small code snippets to possi
 ### Bookmark
     - Website
         - [Geek for Geeks explanation](https://www.geeksforgeeks.org/merge-sort/)
+
