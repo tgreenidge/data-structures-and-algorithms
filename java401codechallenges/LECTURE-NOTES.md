@@ -34,12 +34,14 @@ InsertionSort(int[] arr)
       arr[j + 1] <-- temp
 ```
 
-# Readings and References
-- Watch Video
-- Read
+## Readings and References
+### Watch Video
+    - [Insert Sort Video -  Stanford's CS106B] (https://www.youtube.com/watch?v=qYQjrWgOLS4)
 
-- Article 1
-- Article 2
-- Bookmark
+### Read
+    - [Havard CS50 insertion sort](https://study.cs50.net/insertion_sort)
+    - [Insertion Sort](http://www.tjmaher.com/2016/07/sdet-prep-insertion-sort-and-learning.html)
 
-- Website
+### Bookmark
+    - Website
+        - [Geek for Geeks explanation](https://www.geeksforgeeks.org/insertion-sort/)
