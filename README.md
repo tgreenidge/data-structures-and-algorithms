@@ -24,3 +24,5 @@ Week 1 Challenges
 [Day 16: BinaryTree breadthFirst implementation](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/)
 
 [Day 17: BinaryTree findMaximum implementation](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/)
+
+[Day 26: Insertion Sort implementation](https://github.com/tgreenidge/data-structures-and-algorithms/blob/master/java401codechallenges/)
